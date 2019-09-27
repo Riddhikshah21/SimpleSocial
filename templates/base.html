@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+<head>
+    <meta charset="UTF-8">
+<title>Star Social</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'simplesocial/css/master.css' %}">
+</head>
+<body>
+<!--<nav class="navbar navbar-expand " role="navigation" id="navbar">
+    <div class="container">
+        <a class="  navbar-brand " href="{% url 'home' %}">Star Social</a>
+        <ul class="navbar navbar-right">
+            {% if user.is_authenticated %}
+            <li><a href="#">Post</a></li>
+            <li><a href="#">Groups</a></li>
+            <li><a href="#">Create Group</a></li>
+            <li><a href="{% url 'accounts:logout' %}">Log Out</a></li>
+            {% else %}
+            <li><a href="#">Groups</a></li>
+            <li><a href="{% url 'accounts:login' %}">Login</a></li>
+            <li><a href="{% url 'accounts:signup' %}">SignUp</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Star Social</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav navbar-right">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navbar-right" href="{% url 'accounts:login' %}">Login</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" navbar-right href="{% url 'accounts:signup' %}">SignUp</a>
+      </li>
+
+    </ul>
+  </div>
+</nav>
+{% block content %}
+{% endblock %}
+</body>
+</html>
