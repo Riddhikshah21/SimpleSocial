@@ -5,6 +5,7 @@ class UserCreateForm(UserCreationForm):
     class Meta:
         fields = ('username','email','password1','password2')
         model = get_user_model()
+# Edited by Ravi
 # Configure IntelliJ for Debugging
     #git push and pull
     def __init__(self,*args,**kwargs):
